@@ -1,4 +1,4 @@
-#firstOne {
+#jumbo-header {
 	font-family: 'Anton', sans-serif;
 }
 
@@ -27,6 +27,7 @@
 }
 
 main h2 {
+    font-family: 'Anton', sans-serif;
     color: white;
     background-color: #142033;
     padding: 1px 10px 1px 30px;
