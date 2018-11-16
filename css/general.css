@@ -1,6 +1,24 @@
+#Resume {
+    
+}
 
-body p{
-    color: #222;
+#Resume a:hover {
+    text-decoration: none;
+    text-shadow: 0 0 4px powderblue;
+transition: top 0.3s;
+}
+
+#cards {
+    background-color: #fcfcfc;
+}
+
+body p {
+    color: #000;
+}
+
+#body {
+  background-color: #fcfcfc;
+  color: #000;
 }
 
 #jumbo-header {
@@ -44,16 +62,14 @@ body p{
 
 main h2 {
     font-family: 'Anton', sans-serif;
-    color: white;
-    background-color: #142033;
-    background-color: #627491;
+    color: #fff;
     background-color: #38414f;
     padding: 1px 7px 1px 35px;
     display:inline-block;
 }
 
 main strong {
-    color: ;
+text-shadow: 0 0 1px #fff;
 }
 
 .dropdown {
@@ -152,7 +168,7 @@ img {
   width: auto;
   padding: 16px;
   margin-top: -50px;
-  color: white;
+  color: #fff;
   text-shadow: 5px 5px 10px #fff;
   font-weight: bold;
   font-size: 20px;
@@ -188,7 +204,7 @@ img {
   text-align: center;
   background-color: #38414f;
   padding: 8px;
-  color: white;
+  color: #fff;
   min-height: 42px;
 }
 
@@ -238,11 +254,12 @@ img {
 .footer{
   background: rgb(42,39,48);
   background-color: #38414f;
-  color: white;
+  color: #fff;
   padding: 40px ;
 }
 
 .footer p, #caption {
-  color: white;
+  color: #fff;
 }
+
 

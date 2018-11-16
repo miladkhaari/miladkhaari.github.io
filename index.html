@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">	
 </head>
 
-<body>
+<body id="body">
 
     <div class="container">
 
@@ -56,13 +56,13 @@
         <div class="col-md-6 px-0">
           <h1 id="jumbo-header" class="display-4">Milad Khaari</h1>
           <p class="lead my-3"> My Curriculum Vitae<br> Personal Projects<br> Web Development<br> Challenges</p>
-          <p class="lead mb-0"><a href="#Resume" class="text-white font-weight-bold">And There's More...</a></p>
+          <p class="lead mb-0"><a href="#Resume" class="text-white font-weight-bold" onclick="smoothScroll(document.getElementById('Resume'))">And There's More...</a></p>
         </div>
       </div>
 
       <div class="row mb-2">
         <div class="col-md-6">
-          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250" id="cards">
             <div class="card-body d-flex flex-column align-items-start">
               <strong class="d-inline-block mb-2 text-danger">Simulation</strong>
               <h3 class="mb-0">
@@ -76,7 +76,7 @@
           </div>
         </div>
         <div class="col-md-6">
-          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250" id="cards">
             <div class="card-body d-flex flex-column align-items-start">
               <strong class="d-inline-block mb-2 text-danger">Game</strong>
               <h3 class="mb-0">
@@ -92,12 +92,22 @@
       </div>
     </div>
 
+
+    <div onclick="smoothScroll(this)" id="Resume" style="width: 80%; height: 0px; border-bottom: 1px solid #ccc; text-align: center; margin: 0% 10%; line-height: 4px; ">
+      <a href="#Resume"> <span style="font-size: 40px; padding: 0 10px; color: #939393">
+        &#10730;
+      </span> </a>
+    </div>
+
+    <div style="width: 100%; margin-bottom: 32px;">
+    </div>
+
     <main class="container">
       <div class="row">
         <div class="col-md-8 blog-main">
 
           <div class="blog-post">
-            <h3 id="Resume" class="font-italic">
+            <h3 class="font-italic">
               Curriculum vitae
             </h3>
             <p> Hi, I'm a fresh programmer with both front-end and back-end skills. This is a small blog i made to introduce myself and repressent my recent projects. I haven't worked in a company yet, but have self-studied and experienced building up websites and learned how to handel new problems along the road. If there's a chance for cooperation, I'd be glad to get in touch and apply for the job.<br>
@@ -173,30 +183,6 @@
 
             </div>
 
-            <script>
-            var slideIndex = 1;
-            showSlides(slideIndex);
-
-            function plusSlides(n) {
-              showSlides(slideIndex += n);
-            }
-
-            function showSlides(n) {
-              var i;
-              const slides = document.getElementsByClassName("mySlides");
-              const captionText = document.getElementById("caption");
-              const divars = document.getElementsByClassName("divars");
-
-              if (n > slides.length) {slideIndex = 1}
-              if (n < 1) {slideIndex = slides.length}
-              for (i = 0; i < slides.length; i++) {
-                  slides[i].style.display = "none";
-              }
-
-              slides[slideIndex-1].style.display = "block";
-              captionText.innerHTML = divars[slideIndex-1].alt;
-            }
-            </script>
 
         <br>
         <p> you can visit my sample website <a href="http://divarsample.github.io/" target="_blank"><em>here</em></a>. As I said above it's just a simulation of the <a href="https://divar.ir/tehran/%D8%AA%D9%87%D8%B1%D8%A7%D9%86/browse/%D9%84%D9%88%D8%A7%D8%B2%D9%85-%D8%A7%D9%84%DA%A9%D8%AA%D8%B1%D9%88%D9%86%DB%8C%DA%A9%DB%8C/" target="_blank">original divar website</a> and not a productive site, therefore instead of spending much time on making a non profitable fake site, I focused on studying the basic structure and mechanism of the website and skipped the unimportant details. So this one's only small section of that site that has been sampled.</p>
@@ -278,7 +264,55 @@
 
     </footer>
 
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
 
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+      var i;
+      const slides = document.getElementsByClassName("mySlides");
+      const captionText = document.getElementById("caption");
+      const divars = document.getElementsByClassName("divars");
+
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+
+      slides[slideIndex-1].style.display = "block";
+      captionText.innerHTML = divars[slideIndex-1].alt;
+    }
+    </script>
+
+    <script>
+    window.smoothScroll = function(target) {
+        var scrollContainer = target;
+        do { //find scroll container
+            scrollContainer = scrollContainer.parentNode;
+            if (!scrollContainer) return;
+            scrollContainer.scrollTop += 1;
+        } while (scrollContainer.scrollTop == 0);
+        
+        var targetY = 0;
+        do { //find the top of target relatively to the container
+            if (target == scrollContainer) break;
+            targetY += target.offsetTop;
+        } while (target = target.offsetParent);
+        
+        scroll = function(c, a, b, i) {
+            i++; if (i > 30) return;
+            c.scrollTop = a + (b - a) / 30 * i;
+            setTimeout(function(){ scroll(c, a, b, i); }, 20);
+        }
+        // start scrolling
+        scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+    }
+    </script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
