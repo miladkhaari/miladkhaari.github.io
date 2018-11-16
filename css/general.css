@@ -153,6 +153,7 @@ img {
   padding: 16px;
   margin-top: -50px;
   color: white;
+  text-shadow: 5px 5px 10px #fff;
   font-weight: bold;
   font-size: 20px;
   border-radius: 0 3px 3px 0;
@@ -179,13 +180,13 @@ img {
   padding: 8px 12px;
   position: absolute;
   top: 0;
-background-color: #222;
+  background-color: #38414f;
 }
 
 /* Container for image text */
 .caption-container {
   text-align: center;
-  background-color: #222;
+  background-color: #38414f;
   padding: 8px;
   color: white;
   min-height: 42px;
@@ -215,27 +216,28 @@ background-color: #222;
 
 
 .download-transition:hover {
-    position: relative;
-    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-    animation-name: example;
-    animation-duration: 4s;
+  position: relative;
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 4s;
 }
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes example {
-    0%   {left:0px;}
-    25%  {left:16px;}
+  0%   {left:0px;}
+  25%  {left:16px;}
 }
 
 /* Standard syntax */
 @keyframes example {
-    0%   {left:0px;}
-    25%  {left:16px;}
+  0%   {left:0px;}
+  25%  {left:16px;}
 }
 
 .footer{
   background: rgb(42,39,48);
+  background-color: #38414f;
   color: white;
   padding: 40px ;
 }
