@@ -39,13 +39,11 @@ body {
 
 .topnav{
     color: #6c757d;
-    color: darkcyan;
+    color: #008B8B;
 }
 .topnav:hover{
     text-decoration: none;
-    border-radius: 2px;
-    background-color: cadetblue;
-    color: #fff;
+    color: #b22222;
 }
 
 main h2 {
