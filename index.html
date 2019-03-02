@@ -3,15 +3,16 @@
 <head>
     <title>Milad Khaari</title>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  	<meta name="viewport" content=
+      "width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="description" content="My public website!">
     <meta name="keywords" content="website, front-end">
     <meta name="author" content="Milad Khaari">
     <link rel="icon" href="images/logo.png" type="image/gif" sizes="16x16">
-    <link rel="stylesheet" href="css/general.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/scrollTop.css">
+    <link rel="stylesheet" href="css/general.css" type="text/css">
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -19,15 +20,19 @@
 
 <body id="body">
 
-    <div class="container">
+    <div id="scroll" style="display: none;">
+      <span></span>
+    </div>
+
+    <div class="container" style="background-color: #f5f5fd; border-radius: 0px 0px 10px 10px">
 
       <div class="nav-scroller py-1 mb-2">
   
         <nav class="nav d-flex justify-content-between">
 
-		  <img src="images/logo.png" id="logo" alt="logo">
+		      <img src="images/logo.png" id="logo" alt="logo" />
 
-		  <div id="drop" class="dropdown">
+		      <div id="drop" class="dropdown">
               <button id="dropbutton" class="dropbtn btn btn-sm btn-outline-primary">More</button>
               <div class="dropdown-content">
                   <a class="p-2 text-muted topnav" href="#Resume">Resume</a>         
@@ -36,87 +41,40 @@
                   <a class="p-2 text-muted topnav" href="#Programming">Programming languages</a>
                   <a class="p-2 text-muted topnav" href="#Projects">Projects</a>
                   <a class="p-2 text-muted topnav" href="#game">Game</a>
-                  <a class="p-2 text-muted topnav" href="#contact">Contact</a>
+                  <a class="p-2 text-muted topnav" href="#Contact">Contact</a>
               </div>
           </div>
 
-          <a class="p-2 text-muted topnav" href="#Resume">Resume</a>         
-          <a class="p-2 text-muted topnav" href="#Education">Education</a>
-          <a class="p-2 text-muted topnav" href="#Skills">Skills</a>
-          <a class="p-2 text-muted topnav" href="#Programming">Programming languages</a>
-          <a class="p-2 text-muted topnav" href="#Projects">Projects</a>
-          <a class="p-2 text-muted topnav" href="#game">Game</a>
-          <a class="p-2 text-muted topnav" href="#contact">Contact</a>
+          <a class="p-2 topnav" href="#Resume">Resume</a>         
+          <a class="p-2 topnav" href="#Education">Education</a>
+          <a class="p-2 topnav" href="#Skills">Skills</a>
+          <a class="p-2 topnav" href="#Programming">Programming languages</a>
+          <a class="p-2 topnav" href="#Projects">Projects</a>
+          <a class="p-2 topnav" href="#game">Game</a>
+          <a class="p-2 topnav" href="#Contact">Contact</a>
           
-		  <div class="col-4 d-flex justify-content-end align-items-center">
-            <a id="download-cv" class="btn btn-sm btn-outline-secondary" href="https://github.com/miladkhaari/miladkhaari.github.io/raw/master/CV.pdf">Download the full CV.pdf</a>
+		      <div class="col-4 d-flex justify-content-end align-items-center">
+            <a id="download-cv" class="btn btn-sm btn-outline-secondary" href="https://github.com/miladkhaari/miladkhaari.github.io/raw/master/CV.pdf">Download the CV.pdf</a>
           </div>
 
         </nav>
       </div>
 
-      <div class="jumbotron p-3 p-md-5 text-white rounded " id="jumbo">
-        <div class="col-md-6 px-0">
-          <h1 id="jumbo-header" class="display-4">Milad Khaari</h1>
-          <p class="lead my-3"> My Curriculum Vitae<br> Personal Projects<br> Web Development<br> Challenges</p>
-          <p class="lead mb-0"><a href="#Resume" class="text-white font-weight-bold" onclick="smoothScroll(document.getElementById('Resume'))">And There's More...</a></p>
-        </div>
-      </div>
 
-      <div class="row mb-2">
-        <div class="col-md-6">
-          <div class="card flex-md-row mb-4 box-shadow h-md-250" id="cards">
-            <div class="card-body d-flex flex-column align-items-start">
-              <strong class="d-inline-block mb-2 text-danger">Simulation</strong>
-              <h3 class="mb-0">
-                <a class="text-dark" href="http://divarsample.github.io/" target="_blank">Divar Sample</a>
-              </h3>
-              <div class="mb-1 text-muted">Nov 10</div>
-              <p class="card-text mb-auto">This is my simulated sample of Divar website. All sections are <strong>visually simulated</strong>, and designed but none is copied. It interact too!</p>
-              <a href="http://divarsample.github.io/" target="_blank">Visit website</a>
-            </div>
-            <img class="pic card-img-right flex-auto d-none d-md-block" src="images/divar-logo.png" alt="Card image cap">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card flex-md-row mb-4 box-shadow h-md-250" id="cards">
-            <div class="card-body d-flex flex-column align-items-start">
-              <strong class="d-inline-block mb-2 text-danger">Game</strong>
-              <h3 class="mb-0">
-                <a class="text-dark" href="http://sniper13.github.io/" target="_blank">Play Sniper!</a>
-              </h3>
-              <div class="mb-1 text-muted">Nov 11</div>
-              <p class="card-text mb-auto">This is an other project that I'm working on currently. it uses <strong>canvas</strong> and <strong>javascript</strong> to make a game!</p>
-              <a href="http://sniper13.github.io/" target="_blank">Visit website</a>
-            </div>
-            <img class="pic card-img-right flex-auto d-none d-md-block" style="margin: 10px 20px 0px 0px;" src="images/sniper.png" alt="Card image cap">
-          </div>
-        </div>
-      </div>
+      <h1 id="milad-header" class="display-4">Milad Khaari</h1>
+      <p style="margin: 1px 20px; font-size: 1.25rem;
+font-weight: 300;"> Hi, I'm a fresh programmer with both front-end and back-end skills. This is my blog to introduce myself and repressent my <i>Curriculum vitae</i> and recent projects. I dont have the exprience to work in a company yet, but have self-studied and experienced building up websites and learned how to handle new problems along the road. If there's a chance for cooperation, I'd be glad to get in touch and apply for the job. You can <a href="tel:09365834083">call</a> me or contact me via <a href="mailto:milad.khaari@gmail.com?Subject=Job%20Apply" target="_blank"> email</a>.<br>
+      <span class style="color: #777" ="blog-post-meta"> March 2, 2019 
+      </span> </p>
+      
     </div>
 
-
-    <div onclick="smoothScroll(this)" id="Resume" style="width: 80%; height: 0px; border-bottom: 1px solid #ccc; text-align: center; margin: 0% 10%; line-height: 4px; ">
-      <a href="#Resume"> <span style="font-size: 40px; padding: 0 10px; color: #939393">
-        &#10730;
-      </span> </a>
-    </div>
-
-    <div style="width: 100%; margin-bottom: 32px;">
-    </div>
-
+    <br>
     <main class="container">
       <div class="row">
         <div class="col-md-8 blog-main">
 
           <div class="blog-post">
-            <h3 class="font-italic">
-              Curriculum vitae
-            </h3>
-            <p> Hi, I'm a fresh programmer with both front-end and back-end skills. This is a small blog i made to introduce myself and repressent my recent projects. I haven't worked in a company yet, but have self-studied and experienced building up websites and learned how to handel new problems along the road. If there's a chance for cooperation, I'd be glad to get in touch and apply for the job.<br>
-            <span class="blog-post-meta"> &nbsp; &nbsp; November 11, 2018 by <a href="milad.khaari@gmail.com">Milad Khaari</a> </span> </p>
-            <hr>
-  
 
             <h2 id="Education">Education </h2>
             <h4>Bachelor of Computer Science </h4>
@@ -153,59 +111,40 @@
             </ul>
             <hr>
 
-            <h2 id="Projects">Recent Projects </h2>
+            <h2 id="Projects">Projects </h2>
 
+            <br><br>
             <h4>Divar Sample</h4>
             <p>Here is my simulated sample of <STRONG>Divar</STRONG> website design. All of the parts are <strong>visually simulated</strong>, but none is copied. It interact too! (<em>it's written in pure html, css, and javascript with some jquery code added later.</em>) It's also a <strong>responsive</strong> website, due to using <mark>Bootstrap</mark>, and <mark>Media Queries</mark>. I defined a class named <em>Device</em> and for each device object I've set different attributes. So that it'll be easy to filter the objects just by setting the desirable values and clicking the search button. </p> 
 
-            <div>
+            <p> you can visit my sample website <a href="http://divarsample.github.io/" target="_blank">here</a>. As I said above it's just a simulation of the <a href="https://divar.ir/tehran/%D8%AA%D9%87%D8%B1%D8%A7%D9%86/browse/%D9%84%D9%88%D8%A7%D8%B2%D9%85-%D8%A7%D9%84%DA%A9%D8%AA%D8%B1%D9%88%D9%86%DB%8C%DA%A9%DB%8C/" target="_blank">original divar website</a> and not a productive site, therefore instead of spending much time on making a non profitable fake site, I focused on studying the basic structure and mechanism of the website and skipped the unimportant details. So this one's only small section of that site that has been sampled.
+            </p>
+            <br>
 
-            <h3 style="text-align:center">Divar Sample Gallery</h3>
-            <div class="container">
-              <div class="mySlides">
-                <div class="numbertext">1 / 3</div>
-                <img class="divars" src="images/divar1.png" alt="The <strong>design</strong> and <strong>Layout</strong> of the site, looks exactly like the original's." style="width:100%">
-              </div>
-
-              <div class="mySlides">
-                <div class="numbertext">2 / 3</div>
-                <img class="divars" src="images/divar2.png" alt="I used <strong>JavaScript</strong> to make device <strong>Objects</strong> with different attributes." style="width:100%">
-              </div>
-
-              <div class="mySlides">
-                <div class="numbertext">3 / 3</div>
-                <img class="divars" src="images/divar3.png" alt="In the search box you can <strong>filter your search</strong> by it's name and other attributes..." style="width:100%">
-              </div>
-                
-              <a class="prev" onclick="plusSlides(-1)">❮</a>
-              <a class="next" onclick="plusSlides(1)">❯</a>
-
-              <div class="caption-container">
-                <p id="caption"></p>
-              </div>
-
-            </div>
+            <h4 id="game">Sniper Game</h4>
+            <p>This is an other project that I'm working on currently. it uses <strong>canvas</strong> to implement a game and has multiple interesting options! Right now it's under construction. but you can reach it <a href="http://sniper13.github.io/" target="_blank">here</a>.</p>
+            <hr>
 
 
-        <br>
-        <p> you can visit my sample website <a href="http://divarsample.github.io/" target="_blank"><em>here</em></a>. As I said above it's just a simulation of the <a href="https://divar.ir/tehran/%D8%AA%D9%87%D8%B1%D8%A7%D9%86/browse/%D9%84%D9%88%D8%A7%D8%B2%D9%85-%D8%A7%D9%84%DA%A9%D8%AA%D8%B1%D9%88%D9%86%DB%8C%DA%A9%DB%8C/" target="_blank">original divar website</a> and not a productive site, therefore instead of spending much time on making a non profitable fake site, I focused on studying the basic structure and mechanism of the website and skipped the unimportant details. So this one's only small section of that site that has been sampled.</p>
 
-        </div>
-        <br>
+            <h2 id="Resume">Resume </h2> <br>
+            <p>You can download the full <strong>Curriculum vitae</strong> (my resume) as a pdf file
+            <a href="https://github.com/miladkhaari/miladkhaari.github.io/raw/master/CV.pdf">here</a>. <br>
+            Thank you for taking the time.
+            </p>
+            <hr>
 
-        <h4 id="game">Sniper Game</h4>
-        <p>This is an other project that I'm working on currently. it uses <strong>canvas</strong> to implement a game and has multiple interesting options! Right now it's under construction. but you can reach it <a href="http://sniper13.github.io/" target="_blank"><em>here</em></a>.</p>
+            <h2 id="Contact">Contact Me </h2> <br>
+            <p>You can contact me either by calling me:
+              <ul>
+                <li><a href="tel:09365834083">0936 583 4083</a></li>
+                <li><a href="tel:09029272572">0902 9272 572</a></li>
+              </ul>
 
-        <img class="divars" src="images/sniper-screenshot.png" alt="sniper website" style="width:100%">
-
-        <hr>
-        <p> Download the full <em>Curriculum Vitae</em> (my Resume) <a href="https://github.com/miladkhaari/miladkhaari.github.io/raw/master/CV.pdf"><span class="download-transition">❯❯</span></a>
-        <br>
-          Thank you for taking the time and reading this website. <p>
-        <br>
-
+            or sending me an <a href="mailto:milad.khaari@gmail.com?Subject=Job%20Apply" target="_blank"> email</a>.<br>
+          
+            <br>
           </div><!-- /.blog-post -->
-
 
         </div><!-- /.blog-main -->
 
@@ -217,7 +156,7 @@
           </div>
 
           <div class="p-3">
-            <h4 id="contact" class="font-italic">Contact</h4>
+            <h4 class="font-italic">Contact</h4>
             <ol class="list-unstyled">
               <li><img src="images/gmail.png" alt="gmail icon" style="width:20px;"> milad.khaari@gmail.com</li>
               <li><img src="images/phone.png" alt="phone icon" style="width:20px;"> 0936 583 4083</li>
@@ -235,7 +174,7 @@
 
               <li><img src="images/collaboration.png" alt="collaboration icon" style="width:24px;"> communication, and
                <br>&nbsp; &nbsp; &nbsp; &nbsp;collaboration skills</li>
-              <li><img src="images/english.png" alt="english icon" style="width:24px;"> skilled in English</li>
+              <li><img src="images/english.png" alt="english icon" style="width:20px;"> skilled in English</li>
             </ol>
           </div>
 
@@ -262,67 +201,20 @@
             </p>
         </div>
 
-        <h6>Last update: 13 Nov 2018</h6>
-        <h6>Copyright © 2018 <a href="http://miladkhaari.github.io/">Milad Khaari</a>. All rights reserved.</h6>
+        <h6>Last update: March 2, 2019</h6>
+        <h6>Copyright © 2019 <a href="http://miladkhaari.github.io/">Milad Khaari</a>. All rights reserved.</h6>
 
     </footer>
 
-    <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function showSlides(n) {
-      var i;
-      const slides = document.getElementsByClassName("mySlides");
-      const captionText = document.getElementById("caption");
-      const divars = document.getElementsByClassName("divars");
-
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-      }
-
-      slides[slideIndex-1].style.display = "block";
-      captionText.innerHTML = divars[slideIndex-1].alt;
-    }
-    </script>
-
-    <script>
-    window.smoothScroll = function(target) {
-        var scrollContainer = target;
-        do { //find scroll container
-            scrollContainer = scrollContainer.parentNode;
-            if (!scrollContainer) return;
-            scrollContainer.scrollTop += 1;
-        } while (scrollContainer.scrollTop == 0);
-        
-        var targetY = 0;
-        do { //find the top of target relatively to the container
-            if (target == scrollContainer) break;
-            targetY += target.offsetTop;
-        } while (target = target.offsetParent);
-        
-        scroll = function(c, a, b, i) {
-            i++; if (i > 30) return;
-            c.scrollTop = a + (b - a) / 30 * i;
-            setTimeout(function(){ scroll(c, a, b, i); }, 20);
-        }
-        // start scrolling
-        scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
-    }
-    </script>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
+    <!-- ===================== Scripts ====================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      window.addEventListener("hashchange", function () {
+        window.scrollTo(window.scrollX, window.scrollY - 140);
+      });
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/scrollTop.js"></script>
+
   </body>
 </html>
