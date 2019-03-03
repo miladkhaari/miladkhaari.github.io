@@ -12,6 +12,7 @@
     <link rel="icon" href="images/logo.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/scrollTop.css">
+    <link rel="stylesheet" href="css/divarSlides.css">
     <link rel="stylesheet" href="css/general.css" type="text/css">
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -118,7 +119,55 @@ font-weight: 300;"> Hi, I'm a fresh programmer with both front-end and back-end 
             <h4>Divar Sample</h4>
             <p>Here is my simulated sample of <STRONG>Divar</STRONG> website design. All of the parts are <strong>visually simulated</strong>, but none is copied. It interact too! (<em>it's written in pure html, css, and javascript with some jquery code added later.</em>) It's also a <strong>responsive</strong> website, due to using <mark>Bootstrap</mark>, and <mark>Media Queries</mark>. I defined a class named <em>Device</em> and for each device object I've set different attributes. So that it'll be easy to filter the objects just by setting the desirable values and clicking the search button. </p> 
 
-            <p> you can visit my sample website <a href="http://divarsample.github.io/" target="_blank">here</a>. As I said above it's just a simulation of the <a href="https://divar.ir/tehran/%D8%AA%D9%87%D8%B1%D8%A7%D9%86/browse/%D9%84%D9%88%D8%A7%D8%B2%D9%85-%D8%A7%D9%84%DA%A9%D8%AA%D8%B1%D9%88%D9%86%DB%8C%DA%A9%DB%8C/" target="_blank">original divar website</a> and not a productive site, therefore instead of spending much time on making a non profitable fake site, I focused on studying the basic structure and mechanism of the website and skipped the unimportant details. So this one's only small section of that site that has been sampled.
+            <!--------------------    divarSlides   ------------ -->
+
+            <div id="modalContainer" class="modal">
+                <!-- <form>  **************************************** -->
+                <form id="regForm">
+
+                    <h1 style="text-align:center">Divar Sample Gallery</h1>
+
+                    <div class="container">
+                      <div class="mySlides">
+                        <div class="numbertext">1 / 3</div>
+                        <img class="divars" src="images/divar1.png" alt="The <strong>design</strong> and 
+                        <strong>Layout</strong> of the site, looks exactly like the original's." style="width:100%">
+                      </div>
+
+                      <div class="mySlides">
+                        <div class="numbertext">2 / 3</div>
+                        <img class="divars" src="images/divar2.png" alt="I used <strong>JavaScript</strong> 
+                        to make device <strong>Objects</strong> with different attributes." style="width:100%">
+                      </div>
+
+                      <div class="mySlides">
+                        <div class="numbertext">3 / 3</div>
+                        <img class="divars" src="images/divar3.png" alt="In the search box you can <strong>filter 
+                        your search</strong> by it's name and other attributes..." style="width:100%">
+                      </div>
+                        
+
+                      <!-- butts   ////////////////////////////////// -->    
+                      <div>
+                        <button type="button" onclick="plusSlides(-1)" class="prev">&#10094;</button>
+                        <button type="button" onclick="plusSlides(1)" class="next">&#10095;</button>
+                      </div>
+                      <!-- End of butts   //////////////////////// -->    
+
+                      <div class="caption-container">
+                        <p id="caption"></p>
+                      </div>
+
+                    </div> <!-- End of </container> -->
+
+                </form> <!-- End of </form> -->
+
+            </div> <!-- End of </modalContainer> -->
+            <!------------------------------------------ -->
+
+
+
+            <p>You can take a look at the <a href="#fillforms" onclick="showForm()"><strong>sample photos</strong></a> to see how it works. you can also visit this sample website <a href="http://divarsample.github.io/" target="_blank">here</a>. As I said above it's just a simulation of the <a href="https://divar.ir/tehran/%D8%AA%D9%87%D8%B1%D8%A7%D9%86/browse/%D9%84%D9%88%D8%A7%D8%B2%D9%85-%D8%A7%D9%84%DA%A9%D8%AA%D8%B1%D9%88%D9%86%DB%8C%DA%A9%DB%8C/" target="_blank">original divar website</a> and not a productive site, therefore instead of spending much time on making a non profitable fake site, I focused on studying the basic structure and mechanism of the website and skipped the unimportant details. So this one's only small section of that site that has been poorly sampled.
             </p>
             <br>
 
@@ -191,7 +240,7 @@ font-weight: 300;"> Hi, I'm a fresh programmer with both front-end and back-end 
         <img src="images/logo.png" id="footerlogo" alt="logo">
 
         <nav class="blog-pagination" style="float:right">
-            <a id="back-to-top" class="btn btn-outline-primary" href="#">Back to the Top!</a>
+            <a class="btn btn-outline-primary" href="#fillforms" onclick="showForm()">Sample Project!</a>
         </nav>
 
         <div style="clear:both">
@@ -216,6 +265,8 @@ font-weight: 300;"> Hi, I'm a fresh programmer with both front-end and back-end 
     </script>
     <script src="js/jquery.min.js"></script>
     <script src="js/scrollTop.js"></script>
+    <script src="js/divarSlides.js"></script>
+
 
   </body>
 </html>
